@@ -1,11 +1,21 @@
-import "./App.css";
+import "./css/App.css";
+import Home from "./pages/Home";
+import Favorites from "./pages/Favorites";
 import MovieCard from "./components/MovieCard";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <>
-      {/* que tipo de componentes eu preciso? */}
-    </>
+    <div>
+      <NavBar />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
